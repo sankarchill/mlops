@@ -149,7 +149,7 @@ def handle_training(model_name=None, execution_id=None):
                 'S3OutputPath': f"s3://{bucket_name}/{execution_id}"
             },
             ResourceConfig={
-                'InstanceType': 'ml.m5.xlarge',
+                'InstanceType': 'ml.t3.medium',
                 'InstanceCount': 1,
                 'VolumeSizeInGB': 30
             },
@@ -172,7 +172,7 @@ def handle_evaluation(model_name=None, execution_id=None):
             ProcessingResources={
                 'ClusterConfig': {
                     'InstanceCount': 1,
-                    'InstanceType': 'ml.m5.xlarge',
+                    'InstanceType': 'ml.t3.medium',
                     'VolumeSizeInGB': 30
                 }
             },
