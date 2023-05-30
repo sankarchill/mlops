@@ -48,7 +48,7 @@ def handle_data(model_name=None, execution_id=None):
             ProcessingResources={
                 'ClusterConfig': {
                     'InstanceCount': 1,
-                    'InstanceType': 'ml.m5.xlarge',
+                    'InstanceType': 'ml.t3.medium',
                     'VolumeSizeInGB': 30
                 }
             },
